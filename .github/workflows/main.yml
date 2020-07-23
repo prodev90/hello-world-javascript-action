@@ -9,10 +9,10 @@ jobs:
     name: Test workflow
     steps:
     - name: Hello world action step
-      id: hello
+      id: test
       uses: actions/hello-world-javascript-action@v1
       with:
         who-to-greet: 'web developer'
     # Use the output from the `hello` step
     - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+      run: echo "The time was ${{ steps.test.outputs.time }}"
